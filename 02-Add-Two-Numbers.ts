@@ -1,14 +1,3 @@
-// singly-linked list
-class ListNode {
-    value: number
-    next: ListNode | null
-
-    constructor(value?: number, next?: ListNode | null) {
-        this.value = (value === undefined ? 0 : value)
-        this.next = (next === undefined ? null : next)
-    }
-}
-
 function addTwoNumbers(node1: ListNode | null, node2: ListNode | null): ListNode | null {
     let dummyHead = new ListNode(0);
     let current = dummyHead;
@@ -33,28 +22,6 @@ function addTwoNumbers(node1: ListNode | null, node2: ListNode | null): ListNode
     return dummyHead.next;
 }
 
-// create linked list from array
-function createLinkedList(arr: number[]): ListNode | null {
-    if (arr.length === 0) return null;
-    let head = new ListNode(arr[0]);
-    let current = head;
-    for (let i = 1; i < arr.length; i++) {
-        current.next = new ListNode(arr[i]);
-        current = current.next;
-    }
-    return head;
-}
-
-// convert linked list to array
-function linkedListToArray(head: ListNode | null): number[] {
-    let result: number[] = [];
-    let current = head;
-    while (current !== null) {
-        result.push(current.value);
-        current = current.next;
-    }
-    return result;
-}
 
 // Test
 console.log(linkedListToArray(addTwoNumbers(createLinkedList([2, 4, 3]), createLinkedList([5, 6, 4]))));
