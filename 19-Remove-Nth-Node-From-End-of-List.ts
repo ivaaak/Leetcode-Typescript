@@ -1,3 +1,5 @@
+import { ListNode, createLinkedList, linkedListToArray } from "./data-structures-shared/ListNode";
+
 // 2 pointer solution influenced by hint
 function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
     const dummy = new ListNode(0); // dummy node for edge cases (empty list)

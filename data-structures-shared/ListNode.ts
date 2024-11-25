@@ -1,5 +1,5 @@
 // singly-linked list
-class ListNode {
+export class ListNode {
     value: number
     next: ListNode | null
 
@@ -12,7 +12,7 @@ class ListNode {
 // helper functions:
 
 // create linked list from array
-function createLinkedList(arr: number[]): ListNode | null {
+export function createLinkedList(arr: number[]): ListNode | null {
     if (arr.length === 0) return null;
     let head = new ListNode(arr[0]);
     let current = head;
@@ -23,7 +23,7 @@ function createLinkedList(arr: number[]): ListNode | null {
     return head;
 }
 
-function linkedListToArray(head: ListNode | null): number[] { // linked list to array (for testing)
+export function linkedListToArray(head: ListNode | null): number[] { // linked list to array (for testing)
     const result: number[] = [];
     let current = head;
     

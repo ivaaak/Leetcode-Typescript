@@ -1,3 +1,5 @@
+import { ListNode, createLinkedList, linkedListToArray } from "./data-structures-shared/ListNode";
+
 function addTwoNumbers(node1: ListNode | null, node2: ListNode | null): ListNode | null {
     let dummyHead = new ListNode(0);
     let current = dummyHead;
