@@ -34,3 +34,15 @@ export function linkedListToArray(head: ListNode | null): number[] { // linked l
     
     return result;
 }
+
+
+export function arrayToList(arr: number[]): ListNode | null {
+    if (!arr.length) return null;
+    const dummy = new ListNode(0);
+    let current = dummy;
+    for (const val of arr) {
+        current.next = new ListNode(val);
+        current = current.next;
+    }
+    return dummy.next;
+}
